@@ -18,6 +18,8 @@ class Solver:
         print(tokens_infix)
         
         tokens_postfix = converter.infix2postfix(tokens_infix)
+        print(tokens_postfix)
+        
         ans = stack_calculator.calculate(tokens_postfix)
         
         return ans
