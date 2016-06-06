@@ -1,3 +1,5 @@
+from mynumber import Number
+
 class Op:
     
     def __init__(self, value=''):
@@ -18,15 +20,23 @@ class Op:
 class Sub(Op):
     lexeme = 'SUB'
     priority = 2
-
+    def operate(self, a, b):
+        return Number.new_instance(a.get_value() - b.get_value())
+    
 class Add(Op):
     lexeme = 'ADD'
     priority = 2
-
+    def operate(self, a, b):
+        return Number.new_instance(a.get_value() + b.get_value())
+    
 class Div(Op):
     lexeme = 'DIV'
     priority = 1
-
+    def operate(self, a, b):
+        return Number.new_instance(a.get_value() / b.get_value())
+    
 class Mul(Op):
     lexeme = 'MUL'
     priority = 1
+    def operate(self, a, b):
+        return Number.new_instance(a.get_value() * b.get_value())

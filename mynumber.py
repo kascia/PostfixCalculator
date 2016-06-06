@@ -5,7 +5,10 @@ class Number:
         self.value=value
 
     def __repr__(self):
-        return self.value
+        return str(self.value)
+    
+    def get_value(self):
+        return float(self.value)
     
     @staticmethod
     def new_instance(value):
